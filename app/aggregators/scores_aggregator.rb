@@ -23,7 +23,7 @@ class ScoresAggregator
     Aggrobot.block do
       hash do
         group_by grouping
-        each_group runs_grouping
+        recurse runs_grouping
       end
     end
   end
@@ -32,7 +32,7 @@ class ScoresAggregator
     Aggrobot.block do
       list do
         group_by :score, buckets: SCORE_BUCKETS, keep_empty: true
-        collect_each_group_attributes
+        iterate
       end
     end
   end

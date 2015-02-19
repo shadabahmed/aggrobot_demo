@@ -38,8 +38,7 @@ class ScoresController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_scores
       @player_name = params[:id].split('-').collect(&:classify).join(' ')
-      @scores = Score.where(name: @player_name)
-      @aggregation = ScoresAggregator.new(@scores)
+      @aggregation = ScoresAggregator.new(Score.where(name: @player_name))
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

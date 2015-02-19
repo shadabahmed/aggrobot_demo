@@ -27,7 +27,7 @@ namespace :data do
           when 0..0.50
             'Won'
           else
-            'False'
+            'Lost'
         end
       }
     end
@@ -57,7 +57,7 @@ namespace :data do
           when 0..0.80
             'Won'
           else
-            'False'
+            'Lost'
         end
       }
     end

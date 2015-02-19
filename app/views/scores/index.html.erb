@@ -1,0 +1,23 @@
+<h1>Listing scores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scores.each do |score| %>
+      <tr>
+        <td><%= score.name %></td>
+        <td><%= link_to('Show', score) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
